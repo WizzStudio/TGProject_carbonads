@@ -1,15 +1,29 @@
 # TGProject_carbonads
-Carbonads.net中文版  
 ## 开发者
 游朝阳
 郑守建
 
 ## 项目启动
 
-## 技术栈  
-暂定Express, Pug, BootStrap
+## 技术栈
 
+前端：
 
+1. pug
+2. BootStrap
 
+后端：
 
-test pull request
+1. express
+
+package：
+
+- express
+- body-parser
+- morgan
+- path
+- node-sass
+- nodemon
+- concurrently
+- pug
+
