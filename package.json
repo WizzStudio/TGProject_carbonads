@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.12.1"
+  },
+  "scripts": {
+    "dev": " concurrently -k -p \"[{name}]\" -n \"SCSS,Server\" -c \"green.bold,cyan.bold\" \"npm run watch-sass\"  \"npm run serve\"",
+    "serve": "PORT=4333  nodemon src/tg_info.js",
+    "watch-sass": "node-sass -w src/scss/main.scss public/css/main.css"
+  }
+}
