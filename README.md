@@ -1,4 +1,5 @@
 # TGProject_carbonads
+[![building](https://img.shields.io/travis/rust-lang/rust.svg?style=flat-square)](building)
 ## 开发者
 游朝阳
 郑守建
