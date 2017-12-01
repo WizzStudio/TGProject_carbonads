@@ -19,11 +19,9 @@
 package：
 
 - express
-- body-parser
 - morgan
 - path
 - node-sass
 - nodemon
 - concurrently
 - pug
-- mongoose
