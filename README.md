@@ -15,9 +15,8 @@ npm run serve
 ```
 
 ## 命令
-
-- 启动开发模式
-会同时启动以下两个命令
+- 启动开发模式  
+同时会启动下面两个命令
 ```bash
 npm run dev
 ```
@@ -30,27 +29,20 @@ npm run watch-sass
 npm run serve
 ```
 
-
-
 ## 开发者
 游朝阳
 郑守建
 
-## 项目启动
 
 ## 技术栈
-
 前端：
-
 1. pug
 2. BootStrap
 
 后端：
-
 1. express
 
 package：
-
 - express
 - morgan
 - path
