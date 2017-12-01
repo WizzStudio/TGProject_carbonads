@@ -9,17 +9,28 @@
 ```bash
 npm install
 ```
-2. 启动产品模式  
+2. 启动服务器
 ```bash
 npm run serve
 ```
-3. 启动开发模式 
+
+## 命令
+
+- 启动开发模式
+会同时启动以下两个命令
 ```bash
 npm run dev
-```  
-启动开发模式会同时执行多个命令
-- `npm run watch-sass` 对Sass进行监视
-- `npm run serve` 运行node服务器
+```
+- 启动对Sass进行监视，如果sass文件有改动，自动编译
+```bash
+npm run watch-sass
+```
+- 运行node服务器
+```bash
+npm run serve
+```
+
+
 
 ## 开发者
 游朝阳
