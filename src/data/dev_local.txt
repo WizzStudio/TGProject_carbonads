@@ -1,0 +1,22 @@
+{"基础知识类":
+[{"title":"慕课网","href":"https://www.imooc.com/"},{"title":"w3cschool","href":"https://www.w3cschool.cn/"},{"title":"学习CSS布局","href":"http://zh.learnlayout.com/"},{"title":"FreeCodeCamp","href":"https://www.freecodecamp.cn/"},{"title":"JavaScript标准参考教程(阮一峰)","href":"http://javascript.ruanyifeng.com/"},{"title":"JavaScript教程(廖雪峰)","href":"https://www.liaoxuefeng.com/"},{"title":"ES6教程(阮一峰)","href":"http://es6.ruanyifeng.com/"},{"title":"菜鸟教程","href":"http://www.runoob.com/"}],
+"博客教程类":
+[{"title":"W3C Plus","href":"http://www.w3cplus.com/"},{"title":"掘金","href":"https://juejin.im/timeline"},{"title":"简书","href":"http://www.jianshu.com/"},{"title":"博客园","href":"https://www.cnblogs.com/"},{"title":"CSDN","href":"https://www.csdn.net/"},{"title":"阮一峰博客","href":"http://www.ruanyifeng.com/blog/"}],
+
+"知识互答类":
+[{"title":"segmentfault","href":"https://segmentfault.com/"},{"title":"stackoverflow","href":"https://stackoverflow.com/"},{"title":"知乎","href":"https://www.zhihu.com/"}],
+
+"网页设计类":
+[{"title":"设计师导航网站","href":"http://hao.uisdc.com/"},{"title":"站酷","href":"http://www.zcool.com.cn/"},{"title":"doyoudo","href":"http://doyoudo.com/pages/fundamental"},{"title":"5.求职刷题类"},{"title":"牛客网","href":"https://www.nowcoder.com/6847334"}],
+
+"求职刷题类":
+[{"title":"LeetCode","href":"https://leetcode.com/"},{"title":"百度前端技术学院","href":"http://ife.baidu.com/#/"}],
+
+"获取资源类":
+[{"title":"闲鱼"},{"title":"胖次搜索","href":"http://panc.cc/"}],
+
+"官网推荐类":
+[{"title":"CNode","href":"http://www.runoob.com/"},{"title":"node.js中文网","href":"http://nodejs.cn/"},{"title":"webpack中文官网","href":"https://doc.webpack-china.org/"},{"title":"Vue.js中文官网","href":"https://vuejs.org/"},{"title":"Express官网","href":"http://www.expressjs.com.cn/"},{"title":"MongoDB中文社区","href":"http://www.mongoing.com/"},{"title":"微信小程序开发社区","href":"http://www.henkuai.com/forum.php"},{"title":"jQuery中文文档","href":"http://www.jquery123.com/"},{"title":"MDN","href":"https://developer.mozilla.org/zh-CN/"},{"title":"Lodash","href":"http://lodashjs.com/docs/#_chunkarray-size1"}],
+
+"工具网站类":
+[{"title":"智图-图片优化平台","href":"http://zhitu.isux.us/"},{"title":"JQuery插件库","href":"http://www.jq22.com/"},{"title":"CSS sprite","href":"http://www.spritecow.com/"},{"title":"iconfont","href":"http://www.iconfont.cn/"},{"title":"数据接口代理","href":"https://bird.ioliu.cn/"},{"title":"草料二维码","href":"https://cli.im/"},{"title":"八爪鱼·大数据","href":"http://www.bazhuayu.com/"}]}

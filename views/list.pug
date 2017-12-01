@@ -1,0 +1,34 @@
+extends layout
+block body
+  div.center-block 
+    h3 精选网站
+  div.row
+    - for (let i = 0; i < 3; i++)
+        div.col-sm-6.col-md-4
+          a.thumbnail(href=pics[i].href)
+            img(src=pics[i].src, alt=pics[i].title)
+          a(href=pics[i].href): p.text-warning #{pics[i].title}
+  div.row
+    - for (let i = 3; i < 6; i++)
+        div.col-sm-6.col-md-4
+          a.thumbnail(href=pics[i].href)
+            img(src=pics[i].src, alt=pics[i].title)
+          a(href=pics[i].href): p.text-warning #{pics[i].title}
+  
+  - if (localLinks)
+    h3 国内网站
+    - for (let item in localLinks)
+      h4 #{item}
+      - let type = localLinks[item]
+      - for (let i = 0; i < type.length; i += 4)
+        div.row
+          - for (let j = i; j < i+4 && j < type.length; j++)
+            div.col-md-3
+              a(href=type[j].href): p.text-warning #{type[j].title}
+
+  h3 国外网站
+  -for (let i = 0; i < foreignLinks.length; i += 4)
+    div.row
+      - for (let j = i; j < i+4 && j < foreignLinks.length; j++)
+        div.col-md-3
+          a(href=foreignLinks[j].href): p.text-warning #{foreignLinks[j].title}
