@@ -2,6 +2,7 @@ const express = require('express');
 const logger  = require("morgan");
 const path = require('path');
 const fs = require('fs');
+const mongoose = require('mongoose');
 
 /**
  * controller 
@@ -15,21 +16,32 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 /**
+ * mongodb database
+ */
+mongoose.connect('mongodb://localhost/tginfo', {useMongoClient: true});
+const db = mongoose.connection;
+db.on('error', (err) => {console.log(err)});
+db.on('open', () => {console.log('open mongodb successfully');});
+
+/**
  * express global configuration
  */
 let logStream = fs.createWriteStream(path.join(__dirname, 'logger.log'), {flags: 'a'});
 app.set("views", path.join(__dirname, "../views"));  // 绑定MVC中的View层
 app.set("view engine", "pug");  // 使用渲染引擎
-app.use(logger(":date :method :url :status :response-time ms", {stream: logStream}));  // 使用express 自带 logger -Morgan /*dev common combined short tiny*/
+app.use(logger(":date :method :url :status :response-time ms", {
+  skip: function (req, res) { return res.statusCode < 400;},
+  stream: logStream
+}));  // 使用express 自带 logger -Morgan /*dev common combined short tiny*/
 app.use(express.static(path.join(__dirname, "../public"), {maxAge: 1000})); // 使用express静态转发，/js将转发到/public/js
 
 /**
  * user routers
  */
 app.get('/', (req, res) => {res.render('index', {title: 'Stu Info'})});
-app.get('/business', mainController.businessHandler);
-app.get('/design', mainController.designHandler);
-app.get('/dev', mainController.devHandler);
+app.get('/business', mainController);
+app.get('/design', mainController);
+app.get('/dev', mainController);
 app.get('/about', (req, res) => {res.render('about', {title: 'About'})});
 
 /**

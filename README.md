@@ -23,6 +23,10 @@ npm run dev
 ```bash
 npm run watch-sass
 ```
+- 启动Mongodb
+```bash
+npm run startdb
+```
 - 运行node服务器
 ```bash
 npm run serve
@@ -49,3 +53,4 @@ package：
 - nodemon
 - concurrently
 - pug
+- mongoose

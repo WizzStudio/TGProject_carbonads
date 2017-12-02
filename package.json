@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "express": "^4.16.2",
+    "mongoose": "^4.13.5",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
     "pug": "^2.0.0-rc.4"
@@ -11,8 +12,10 @@
     "nodemon": "^1.12.1"
   },
   "scripts": {
-    "dev": " concurrently -k -p \"[{name}]\" -n \"SCSS,Server\" -c \"green.bold,cyan.bold\" \"npm run watch-sass\"  \"npm run serve\"",
-    "serve": "PORT=4333  nodemon src/tg_info.js",
-    "watch-sass": "node-sass -w src/scss/main.scss public/css/main.css"
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SCSS,Mongo,Server\" -c \"green.bold,blue.bold,cyan.bold\" \"npm run watch-sass\" \"npm run startdb\" \"npm run start\"",
+    "serve": "concurrently -k -p \"[{name}]\" -n \"Mongo,Server\" -c \"blue.bold,cyan.bold\" \"npm run startdb\" \"npm run start\"",
+    "watch-sass": "node-sass -w src/scss/main.scss public/css/main.css",
+    "startdb": "mongod --dbpath=src/db/",
+    "start": "PORT=4333 nodemon src/tg_info.js"
   }
 }
