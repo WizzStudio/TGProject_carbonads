@@ -13,7 +13,7 @@ npm install
 ```
 npm run initdb
 ```
-*只能初始化一次*
+*只能初始化一次*  
 2. 启动服务器
 ```bash
 npm run serve
