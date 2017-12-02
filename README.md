@@ -9,12 +9,22 @@
 ```bash
 npm install
 ```
+2. 初始化数据库
+```
+npm run initdb
+```
+*只能初始化一次*
 2. 启动服务器
 ```bash
 npm run serve
 ```
 
 ## 命令
+- 初始化数据库
+```bash
+npm run initdb
+```
+*只能初始化一次，若想保证数据安全，可把data目录删除*
 - 启动开发模式，同时会启动下面两个命令
 ```bash
 npm run dev

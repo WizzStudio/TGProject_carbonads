@@ -1,2 +1,6 @@
 Sat, 02 Dec 2017 11:51:06 GMT GET /dev55 404 4.525 ms
 Sat, 02 Dec 2017 11:51:18 GMT GET /dev55 404 9.628 ms
+Sat, 02 Dec 2017 12:07:55 GMT GET /business 500 127.657 ms
+Sat, 02 Dec 2017 12:11:22 GMT GET /business 500 306.776 ms
+Sat, 02 Dec 2017 12:12:56 GMT GET /business 500 297.871 ms
+Sat, 02 Dec 2017 12:12:57 GMT GET /business 500 106.183 ms
