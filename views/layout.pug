@@ -6,11 +6,16 @@ html(lang='en')
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title #{title}
     link(rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
-    link(href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet")
+    //link(href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet")
     link(rel="stylesheet" href="/css/layout.css")
+
+    // main.css 里面有BootStrap
+    link(rel="stylesheet" href="/css/main.css")
+
 body
-  include menu
-  div.container
-    block body
+  .layout
+    include components/menu
+    div.container
+      block body
   script(src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js")
   script(src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")

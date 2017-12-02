@@ -1,3 +1,25 @@
 extends layout
 block body
-	p hello
+	.row(style="margin-top:20px;")
+		.col-sm-6.col-md-4
+			.thumbnail
+				img(src="/img/intro/p3.jpg")
+				.caption
+					h3 商业板块
+					p  提供各大主流互联网商业讯息网站入口，以及常用工具汇总。
+					p.text-center: a(href='/business').btn.btn-default.item-btn 进入
+		.col-sm-6.col-md-4
+			.thumbnail
+				img(src="/img/intro/p2.jpg")
+				.caption
+					h3 设计板块
+					p 陈列了大部分设计师常逛的设计网站，图片网站，以及素材网站。
+					p.text-center: a(href='/design').btn.btn-default.item-btn 进入
+
+		.col-sm-6.col-md-4
+			.thumbnail
+				img(src="/img/intro/p1.jpg")
+				.caption
+					h3 技术板块
+					p Web技术学习常用网站汇总，API文档网站汇总，以及各类技术工具网站汇总。
+					p.text-center: a(href='/dev').btn.btn-default.item-btn 进入

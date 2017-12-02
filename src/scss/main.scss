@@ -2,6 +2,11 @@
 @import "lib/font-awesome/font-awesome";  // 载入icon
 @import "normalize";  // 规范化默认样式
 
+@import "components/menu";
+
+@import "layout";
+@import "index";
+
 html{
   padding:0;
   margin: 0;
@@ -9,6 +14,7 @@ html{
 
 body{
   background: #f7f7f7;
+
 }
 
 a:hover{

@@ -6,7 +6,7 @@ const businessHandler = (req, res, next) => {
 		api.getPicByType('business', (err ,pics) => {
 			if (err) return next(err);
 			res.render('list', {
-				title: 'Business',
+				title: '商业与产品',
 				foreignLinks: foreignLinks,
 				localLinks: localLinks,
 				pics: pics
@@ -21,7 +21,7 @@ const designHandler = (req, res, next) => {
 		api.getPicByType('design', (err ,pics) => {
 			if (err) return next(err);
 			res.render('list', {
-				title: 'Design',
+				title: '设计',
 				foreignLinks: foreignLinks,
 				localLinks: localLinks,
 				pics: pics
@@ -36,7 +36,7 @@ const devHandler = (req, res, next) => {
 		api.getPicByType('dev', (err ,pics) => {
 			if (err) return next(err);
 			res.render('list', {
-				title: 'Dev',
+				title: '开发',
 				foreignLinks: foreignLinks,
 				localLinks: localLinks,
 				pics: pics,
