@@ -1,0 +1,61 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf8')
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title #{title}
+    link(rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    //link(href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet")
+    link(rel="stylesheet" href="/css/layout.css")
+
+    // main.css 里面有BootStrap
+    link(rel="stylesheet" href="/css/main.css")
+
+body
+  .container
+    .row
+      .col-md-6
+        ul.list-group
+          -for(let cate in list)
+            h3 #{cate}
+            - let category = list[cate]
+            -for(let type in category) 
+              h4 #{type}
+              - if(type == 'localLinks')
+                -let tags = category[type]
+                  -for (let tag in tags)
+                    h5 #{tag}
+                    -let content = tags[tag]
+                      each item in content
+                        li.list-group-item #{item.title}
+                          a.pull-right(href="/admin/link/"+item.id) Delete
+              - else
+                - let content = category[type]
+                  each item in content
+                    li.list-group-item #{item.title}
+                      a.pull-right(href="/admin/link/"+item.id) Delete
+      .col-md-6
+        br
+        div.panel.panel-default
+          div.panel-heading
+            h3.panel-title 提示
+          div.panel-body
+            ul
+              li 请先登录
+              li 按DELETE可以删除
+        h3 登录
+        include components/message
+        form(action='/admin/login' method='post')
+          div.form-group
+            lable 用户名
+            input.form-control(type='text', name='name')
+          div.form-group
+            lable 密码
+            input.form-control(type='password', name='pass')
+          button.btn.btn-default(type='submit') 提交
+        h3 退出
+        form(action='/admin/logout', method='post')
+          button.btn.btn-default(type='submit') 退出
+  script(src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js")
+  script(src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")

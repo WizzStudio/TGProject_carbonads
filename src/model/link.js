@@ -14,7 +14,8 @@ const LinkSchema = mongoose.Schema({
 	},
 	isPic: {
 		type: Boolean,
-		require: true
+		default: false,
+		require: true,
 	}, 
 	category: {
 		type: String,
@@ -22,10 +23,15 @@ const LinkSchema = mongoose.Schema({
 	},
 	tag: {
 		type: String,
+		require: true
 	},
 	isLocal: {
 		type: Boolean,
 		require: true
+	},
+	createdDate: {
+		type: Date,
+		default: Date.now
 	}
 });
 LinkSchema.statics.save = (data, callback) => {
@@ -33,7 +39,7 @@ LinkSchema.statics.save = (data, callback) => {
 	link.save(callback);
 };
 LinkSchema.statics.findByCategory = (category, callback) => {
-	Link.find({category: category}, {}, {}, callback);
+	Link.find({category: category}, {}, {sort: {createdDate: -1}}, callback);
 }
 
 const Link = mongoose.model('Link', LinkSchema);

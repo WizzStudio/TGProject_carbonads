@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "formidable": "^1.1.1",
     "mongoose": "^4.13.5",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
