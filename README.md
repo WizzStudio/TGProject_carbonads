@@ -9,15 +9,24 @@
 ```bash
 npm install
 ```
-2. 初始化数据库
-```
-npm run initdb
-```
-*只能初始化一次*  
 2. 启动服务器
-```bash
-npm run serve
 ```
+npm run server
+``` 
+3. 初始化数据库
+```bash
+node src/lib/writeDB.js
+```
+4. 初始化用户  
+设置用户名和密码
+```bash
+vi src/lib/createnewuser.js
+```
+载入用户
+```
+node src/lib/createnewuser.js
+```
+5. 浏览网页
 
 ## 命令
 - 初始化数据库
@@ -64,3 +73,7 @@ package：
 - concurrently
 - pug
 - mongoose
+- body-parser
+- express-session
+- formidable
+- bcrypt

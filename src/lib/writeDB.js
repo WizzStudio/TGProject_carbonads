@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const Link = require('../model/link');
 const fs = require('fs');
+const path = require('path');
 
 let now = Date.now();
-while (Date.now()-now < 1500) ;
+while (Date.now()-now < 1000) ;
 
 /**
  * mongodb database
@@ -13,12 +14,13 @@ const db = mongoose.connection;
 db.on('error', (err) => {console.log(err)});
 db.on('open', () => {console.log('open mongodb successfully');});
 
+const filePath = path.join(__dirname, "../data");
 const names = ['business', 'design', 'dev'];
 const type = ['foreign', 'local', 'pic'];
 
 names.forEach((name) => {
 	type.forEach((type) => {
-		fs.readFile(__dirname+'/'+name+'_'+type+'.txt', (err, data) => {
+		fs.readFile(filePath+'/'+name+'_'+type+'.txt', (err, data) => {
 			if(err) {
 				console.error(err);
 				return;
