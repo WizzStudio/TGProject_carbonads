@@ -4,29 +4,35 @@
 ## 功能
 提供Web学习网站
 
-## 启动
-1. 下载所需依赖  
+## 启动与部署（服务器上需要提前安装好mongo）
+- 下载所需依赖
+进入项目文件夹后：
 ```bash
-npm install
+npm install 或者 cnpm install
 ```
-2. 启动服务器
+
+- 启动mongo
+
+备注：db是放置在/src/db下的，考虑到仓库的一致性，所以没有把/src/db发布到git仓库里，此处需要在/src文件夹下新建一个db的目录
+
+```bash
+mongod --dbpath=src/db/
 ```
-npm run server
-``` 
-3. 初始化数据库
+
+- 新建另一个shell会话窗口，并初始化数据库
 ```bash
 node src/lib/writeDB.js
 ```
-4. 初始化用户  
+- 初始化用户
 设置用户名和密码
 ```bash
 vi src/lib/createnewuser.js
 ```
-载入用户
+- 载入用户
 ```
 node src/lib/createnewuser.js
 ```
-5. 浏览网页
+- 浏览网页
 
 ## 命令
 - 初始化数据库
