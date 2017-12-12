@@ -13,25 +13,17 @@ module.exports = router;
 
 const event = new events();
 
-router.get('/', adminIndexHandler);
 router.post('/login', 
 	required('name'),
 	required('pass'),
 	loginHandler
 );
-router.post('/post', 
-	checkLoginStatus,
-	linkPostHandler
-);
-router.post('/logout',
-	checkLoginStatus,
-	logoutHandler
-);
+router.use(checkLoginStatus);
+router.get('/', adminIndexHandler);
+router.post('/post', linkPostHandler);
+router.post('/logout', logoutHandler);
 router.get('/list', listHandler);
-router.get('/link/:id', 
-	checkLoginStatus,
-	linkDeleteHandler
-);
+router.get('/link/:id', linkDeleteHandler);
 
 function adminIndexHandler(req, res, next) {
 	res.locals.title = 'Admin';
@@ -40,6 +32,7 @@ function adminIndexHandler(req, res, next) {
 
 function loginHandler(req, res, next) {
 	User.authenticate(req.body, (err, user) => {
+		console.log(req.body);
 		if (err) return next(err);
 		if (!user) {
 			res.error('输入信息有误。');
@@ -113,8 +106,8 @@ function linkDeleteHandler(req, res, next) {
 
 function checkLoginStatus(req, res, next) {
 	if (!req.session.uid) {
-		res.error('请先登录。');
-		res.redirect('/admin');
+		res.locals.title = '登录';
+		res.render('adminlogin');
 	} else {
 		next();
 	}

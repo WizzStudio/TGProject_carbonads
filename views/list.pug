@@ -5,7 +5,7 @@ block body
   div.row
     - for (let i = 0; i < 3; i++)
         div.col-sm-6.col-md-4
-          a.thumbnail(href=pics[i].href)
+          a.thumbnail(href=pics[i].href, _target=block)
             img(src=pics[i].src, alt=pics[i].title)
           a(href=pics[i].href): p.text-warning #{pics[i].title}
   div.row

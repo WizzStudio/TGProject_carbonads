@@ -1,0 +1,14 @@
+extends adminlayout
+block body
+  .container
+    .col-md-4.col-md-offset-4
+      h3 登录
+        include components/message
+        form(action='/admin/login' method='post')
+          div.form-group
+            lable: h4 用户名
+            input.form-control(type='text', name='name')
+          div.form-group
+            lable: h4 密码
+            input.form-control(type='password', name='pass')
+          button.btn.btn-default(type='submit') 提交

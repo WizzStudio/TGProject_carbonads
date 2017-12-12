@@ -77,16 +77,16 @@ app.use((req, res, next) => {
 /**
  * error handler
  */
-// app.use((err, req, res, next) => {
-// 	err.status = err.status || 500;
-// 	if (err.status != 404) {
-// 		err.message = '500 Internal Server Error!';
-// 	} else {
-// 		err.message = '404 Not Found!';
-// 	}
-// 	res.statusCode = err.status;
-// 	res.render('error', {message: err.message});
-// });
+app.use((err, req, res, next) => {
+	err.status = err.status || 500;
+	if (err.status != 404) {
+		err.message = '500 Internal Server Error!';
+	} else {
+		err.message = '404 Not Found!';
+	}
+	res.statusCode = err.status;
+	res.render('error', {message: err.message});
+});
 
 /**
  * start server port
