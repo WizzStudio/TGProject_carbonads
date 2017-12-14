@@ -4,24 +4,36 @@ block body
     .row
       .col-md-6
         ul.list-group
-          -for(let cate in list)
-            h3 #{cate}
-            - let category = list[cate]
-            -for(let type in category) 
-              h4 #{type}
-              - if(type == 'localLinks')
-                -let tags = category[type]
-                  -for (let tag in tags)
-                    h5 #{tag}
-                    -let content = tags[tag]
-                      each item in content
-                        li.list-group-item #{item.title}
-                          a.pull-right(href="/admin/link/"+item.id) Delete
-              - else
-                - let content = category[type]
-                  each item in content
-                    li.list-group-item #{item.title}
-                      a.pull-right(href="/admin/link/"+item.id) Delete
+          div.accordion#mather
+            -for(let cate in list)
+              .accordion-group
+                .accordion-heading
+                  a.accordion-toggle(data-toggle='collapse' data-parent='#mather' href='#'+cate): h3 #{cate}
+                  - let category = list[cate]
+                div(id=cate).accordion-body.collapse
+                  -for(let type in category) 
+                    .accordion#father
+                      .accordion-group
+                        .accordion-heading
+                          a.accordion-toggle(data-toggle='collapse' data-parent='#father' href='#'+type+cate): h4 #{type}
+                      - if(type == 'localLinks')
+                        -let tags = category[type]
+                        div(id=type+cate).accordion-body.collapse
+                          -for (let tag in tags)
+                            .accordion-group
+                              .accordion-heading
+                                a.accordion-toggle(data-toggle='collapse' data-parent='#father' href='#'+tag): h5 #{tag}
+                              -let content = tags[tag]
+                              div(id=tag).accordion-body.collapse
+                                each item in content
+                                  li.list-group-item #{item.title}
+                                    a.pull-right(href="/admin/link/"+item.id) Delete
+                      - else
+                        - let content = category[type]
+                        div(id=type+cate).accordion-body.collapse
+                          each item in content
+                            li.list-group-item #{item.title}
+                              a.pull-right(href="/admin/link/"+item.id) Delete
       .col-md-6
         br
         div.panel.panel-default
@@ -29,5 +41,4 @@ block body
             h3.panel-title 提示
           div.panel-body
             ul
-              li 请先登录
               li 按DELETE可以删除
