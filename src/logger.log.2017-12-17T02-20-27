@@ -1,0 +1,50 @@
+2017-12-17T10:19:57.072+0800 I CONTROL  [initandlisten] MongoDB starting : pid=7795 port=27017 dbpath=/home/jianzs/Code/club/TGProject_carbonads/src/db/ 64-bit host=jianzs-computer
+2017-12-17T10:19:57.072+0800 I CONTROL  [initandlisten] db version v3.4.10
+2017-12-17T10:19:57.072+0800 I CONTROL  [initandlisten] git version: 078f28920cb24de0dd479b5ea6c66c644f6326e9
+2017-12-17T10:19:57.072+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2017-12-17T10:19:57.072+0800 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-17T10:19:57.072+0800 I CONTROL  [initandlisten] modules: none
+2017-12-17T10:19:57.073+0800 I CONTROL  [initandlisten] build environment:
+2017-12-17T10:19:57.073+0800 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2017-12-17T10:19:57.073+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-17T10:19:57.073+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-17T10:19:57.073+0800 I CONTROL  [initandlisten] options: { processManagement: { fork: true }, storage: { dbPath: "src/db/" }, systemLog: { destination: "file", path: "src/logger.log" } }
+2017-12-17T10:19:57.076+0800 I -        [initandlisten] Detected data files in /home/jianzs/Code/club/TGProject_carbonads/src/db/ created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-17T10:19:57.076+0800 I STORAGE  [initandlisten] 
+2017-12-17T10:19:57.076+0800 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-12-17T10:19:57.076+0800 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-12-17T10:19:57.076+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3436M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-17T10:19:57.368+0800 I CONTROL  [initandlisten] 
+2017-12-17T10:19:57.368+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-12-17T10:19:57.368+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-12-17T10:19:57.368+0800 I CONTROL  [initandlisten] 
+2017-12-17T10:19:57.368+0800 I CONTROL  [initandlisten] 
+2017-12-17T10:19:57.368+0800 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-12-17T10:19:57.368+0800 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-12-17T10:19:57.368+0800 I CONTROL  [initandlisten] 
+2017-12-17T10:19:57.369+0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. rlimits set to 31153 processes, 1048576 files. Number of processes should be at least 524288 : 0.5 times number of files.
+2017-12-17T10:19:57.369+0800 I CONTROL  [initandlisten] 
+2017-12-17T10:19:57.373+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/jianzs/Code/club/TGProject_carbonads/src/db/diagnostic.data'
+2017-12-17T10:19:57.374+0800 I NETWORK  [thread1] waiting for connections on port 27017
+2017-12-17T10:20:42.554+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:42702 #1 (1 connection now open)
+2017-12-17T10:20:52.206+0800 I -        [conn1] end connection 127.0.0.1:42702 (1 connection now open)
+2017-12-17T10:21:05.203+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:42724 #2 (1 connection now open)
+2017-12-17T10:21:05.219+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:42724 conn2: { driver: { name: "nodejs", version: "2.2.33" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.10.0-42-generic" }, platform: "Node.js v8.9.0, LE, mongodb-core: 2.1.17" }
+2017-12-17T10:21:22.019+0800 I -        [conn2] end connection 127.0.0.1:42724 (1 connection now open)
+2017-12-17T10:21:53.624+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:42848 #3 (1 connection now open)
+2017-12-17T10:21:56.545+0800 I -        [conn3] end connection 127.0.0.1:42848 (1 connection now open)
+2017-12-17T10:22:00.396+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:42854 #4 (1 connection now open)
+2017-12-17T10:22:05.154+0800 I -        [conn4] end connection 127.0.0.1:42854 (1 connection now open)
+2017-12-17T10:23:09.378+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:43424 #5 (1 connection now open)
+2017-12-17T10:23:09.379+0800 I NETWORK  [conn5] received client metadata from 127.0.0.1:43424 conn5: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.10" }, os: { type: "Linux", name: "Ubuntu", architecture: "x86_64", version: "16.04" } }
+2017-12-17T10:23:25.186+0800 I COMMAND  [conn5] terminating, shutdown command received
+2017-12-17T10:23:25.186+0800 I NETWORK  [conn5] shutdown: going to close listening sockets...
+2017-12-17T10:23:25.186+0800 I NETWORK  [conn5] closing listening socket: 7
+2017-12-17T10:23:25.186+0800 I NETWORK  [conn5] closing listening socket: 8
+2017-12-17T10:23:25.186+0800 I NETWORK  [conn5] removing socket file: /tmp/mongodb-27017.sock
+2017-12-17T10:23:25.186+0800 I NETWORK  [conn5] shutdown: going to flush diaglog...
+2017-12-17T10:23:25.186+0800 I FTDC     [conn5] Shutting down full-time diagnostic data capture
+2017-12-17T10:23:25.204+0800 I STORAGE  [conn5] WiredTigerKVEngine shutting down
+2017-12-17T10:23:25.321+0800 I STORAGE  [conn5] shutdown: removing fs lock...
+2017-12-17T10:23:25.321+0800 I CONTROL  [conn5] now exiting
+2017-12-17T10:23:25.321+0800 I CONTROL  [initandlisten] shutting down with code:0
