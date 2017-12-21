@@ -16,6 +16,7 @@ const message = require('./lib/middlewares/message');
  */
 const mainController = require('./controllers/main');
 const adminController = require('./controllers/admin');
+const apiController = require('./controllers/api');
 
 /**
  * express server
@@ -59,11 +60,13 @@ app.use(message);  // 用于重定向传递错误信息
  * user routers
  */
 app.use('/admin', adminController);
+app.use('/api', apiController);
 app.get('/', (req, res) => {res.render('index', {title: 'Stu Info'})});
 app.get('/business', mainController);
 app.get('/design', mainController);
 app.get('/dev', mainController);
 app.get('/about', (req, res) => {res.render('about', {title: 'About'})});
+app.get('/test', (req, res) => {res.render('test')});
 
 /**
  * 404 NOT FOUND
@@ -77,16 +80,16 @@ app.use((req, res, next) => {
 /**
  * error handler
  */
-app.use((err, req, res, next) => {
-	err.status = err.status || 500;
-	if (err.status != 404) {
-		err.message = '500 Internal Server Error!';
-	} else {
-		err.message = '404 Not Found!';
-	}
-	res.statusCode = err.status;
-	res.render('error', {message: err.message});
-});
+// app.use((err, req, res, next) => {
+// 	err.status = err.status || 500;
+// 	if (err.status != 404) {
+// 		err.message = '500 Internal Server Error!';
+// 	} else {
+// 		err.message = '404 Not Found!';
+// 	}
+// 	res.statusCode = err.status;
+// 	res.render('error', {message: err.message});
+// });
 
 /**
  * start server port
