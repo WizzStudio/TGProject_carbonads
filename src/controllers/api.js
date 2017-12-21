@@ -22,7 +22,7 @@ function getQuestions(req, res, next) {
 	Question.find(conditions, {}, Options, (err, questions) => {
 		  	if (err) return next(err);
 		  	questions = formatQuestions(questions, isAdmin);
-		  	Question.count(conditions, (err, numbeconsolers) => {
+		  	Question.count(conditions, (err, numbers) => {
 		  		let data = {
 			  		questions: questions,
 			  		page: {
